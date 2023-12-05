@@ -1,61 +1,66 @@
 import './header.scss';
 import logo from '../../assets/hogwarts.png';
+import { NavLink } from 'react-router-dom';
+import { SideBar } from '../BurgerMenu/SideBar';
 
 const Header = () => {
   return (
     <>
       <header className="header">
+        <div className="sidebar-container">
+          <SideBar className="sidebar" />
+        </div>
+
+        <img
+          src={logo}
+          className="header-logo"
+          alt="hogwarts logo"
+        ></img>
+
         <nav className="header-nav">
           <ul className="header-nav__list">
             <li className="header-nav__item">
-              <a
-                href="#"
+              <NavLink
+                to="/"
                 className="header-nav__link"
               >
                 Home
-              </a>
+              </NavLink>
             </li>
             <li className="header-nav__item">
-              <a
-                href="#"
+              <NavLink
+                to="/gryffindor"
                 className="header-nav__link"
               >
                 Gryffindor
-              </a>
+              </NavLink>
             </li>
             <li className="header-nav__item">
-              <a
-                href="#"
+              <NavLink
+                to="/slytherin"
                 className="header-nav__link"
               >
                 Slytherin
-              </a>
+              </NavLink>
             </li>
             <li className="header-nav__item">
-              <a
-                href="#"
+              <NavLink
+                to="/hufflepuff"
                 className="header-nav__link"
               >
                 Hufflepuff
-              </a>
+              </NavLink>
             </li>
             <li className="header-nav__item">
-              <a
-                href="#"
+              <NavLink
+                to="/ravenclaw"
                 className="header-nav__link"
               >
                 Ravenclaw
-              </a>
+              </NavLink>
             </li>
           </ul>
-
-          <img
-            src={logo}
-            className="header-logo"
-            alt="hogwarts logo"
-          ></img>
         </nav>
-        <hr />
       </header>
     </>
   );

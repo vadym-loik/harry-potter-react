@@ -1,0 +1,31 @@
+.gryffindor {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 45px;
+
+  padding: 20px;
+
+  &-logo {
+    width: 50%;
+  }
+
+  &-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+}
+
+@media (min-width: 440px) {
+  .gryffindor {
+    &-logo {
+      width: 32%;
+    }
+
+    &-list {
+      gap: 25px;
+    }
+  }
+}

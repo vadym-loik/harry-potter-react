@@ -1,7 +1,12 @@
 import './App.scss';
 import Header from './Components/Header/Header';
 import Hero from './Components/Hero/Hero';
+import Footer from './Components/Footer/Footer';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Gryffindor from './Containers/Gryffindor/Gryffindor';
+import Ravenclaw from './Containers/Ravenclaw/Ravenclaw';
+import Slytherin from './Containers/Slytherin/Slytherin';
+import Hufflepuff from './Containers/Hufflepuff/Hufflepuff';
 
 function App() {
   return (
@@ -11,10 +16,30 @@ function App() {
           <Header />
           <Hero />
 
-          <Routes></Routes>
+          <Routes>
+            <Route
+              path="/"
+              element={<></>}
+            />
+            <Route
+              path="/gryffindor"
+              element={<Gryffindor />}
+            />
+            <Route
+              path="/ravenclaw"
+              element={<Ravenclaw />}
+            />
+            <Route
+              path="/slytherin"
+              element={<Slytherin />}
+            />
+            <Route
+              path="/hufflepuff"
+              element={<Hufflepuff />}
+            />
+          </Routes>
 
-          <main className="main"></main>
-          <footer className="footer"></footer>
+          <Footer />
         </div>
       </div>
     </BrowserRouter>

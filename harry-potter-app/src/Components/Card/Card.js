@@ -1,21 +1,27 @@
 import './card.scss';
 
 const Card = (props) => {
-  let cardInfo = props;
+  let aplicants = props.aplicants;
 
   return (
     <>
-      <div className="card">
+      <div
+        className="card"
+        key={aplicants.id}
+      >
         <img
-          src={'https://ik.imagekit.io/hpapi/harry.jpg'}
-          alt="Avatar"
+          src={aplicants.image}
+          alt="avatar"
         ></img>
         <div className="card-container">
+          <h3>
+            <b>"{aplicants.name}"</b>
+          </h3>
           <h4>
-            <b>{'Harry Potter'}</b>
+            <b>Actor: {aplicants.actor}</b>
           </h4>
-          <p>Patronus:{}</p>
-          <p>House:{}</p>
+          <p>Patronus: {aplicants.patronus}</p>
+          <p>House: {aplicants.house}</p>
         </div>
       </div>
     </>
