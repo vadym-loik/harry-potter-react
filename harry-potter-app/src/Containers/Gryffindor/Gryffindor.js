@@ -19,7 +19,7 @@ const Gryffindor = () => {
   }, []);
 
   const renderListOfCards = () => {
-    return gryffData?.map((aplicant) => (
+    return gryffData?.slice(0, 10).map((aplicant) => (
       <Card
         aplicants={aplicant}
         key={uuidv4()}
@@ -28,16 +28,17 @@ const Gryffindor = () => {
   };
 
   return (
-    <>
+    <div className="gryffindor-wrap">
+      <img
+        src={logo}
+        className="gryffindor-logo"
+        alt="gryffindor logo"
+      ></img>
+
       <div className="gryffindor">
-        <img
-          src={logo}
-          className="gryffindor-logo"
-          alt="gryffindor logo"
-        ></img>
         <div className="gryffindor-list">{renderListOfCards()}</div>
       </div>
-    </>
+    </div>
   );
 };
 

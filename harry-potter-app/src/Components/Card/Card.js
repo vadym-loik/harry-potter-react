@@ -11,6 +11,7 @@ const Card = (props) => {
       >
         <img
           src={aplicants.image}
+          className="card-img"
           alt="avatar"
         ></img>
         <div className="card-container">

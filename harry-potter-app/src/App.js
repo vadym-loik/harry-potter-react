@@ -7,6 +7,7 @@ import Gryffindor from './Containers/Gryffindor/Gryffindor';
 import Ravenclaw from './Containers/Ravenclaw/Ravenclaw';
 import Slytherin from './Containers/Slytherin/Slytherin';
 import Hufflepuff from './Containers/Hufflepuff/Hufflepuff';
+import Home from './Containers/HomePage/Home';
 
 function App() {
   return (
@@ -14,12 +15,11 @@ function App() {
       <div className="App">
         <div className="container">
           <Header />
-          <Hero />
 
           <Routes>
             <Route
               path="/"
-              element={<></>}
+              element={<Home />}
             />
             <Route
               path="/gryffindor"

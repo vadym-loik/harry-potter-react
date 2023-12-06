@@ -1,31 +1,41 @@
+.gryffindor-wrap {
+  background-color: brown;
+  padding: 20px 0;
+}
+
 .gryffindor {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 45px;
-
-  padding: 20px;
-
   &-logo {
-    width: 50%;
-  }
-
-  &-list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
+    max-width: 150px;
+    margin: 0 auto;
+    padding: 20px 0;
   }
 }
 
-@media (min-width: 440px) {
+@media (min-width: 430px) {
   .gryffindor {
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+
     &-logo {
-      width: 32%;
+      max-width: 200px;
     }
 
     &-list {
-      gap: 25px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  .gryffindor {
+    overflow-x: scroll;
+
+    &-list {
+      justify-content: left;
+      flex-wrap: nowrap;
     }
   }
 }

@@ -80,3 +80,9 @@
 .bm-item:hover {
   color: #ffffff;
 }
+
+@media (min-width: 431px) {
+  .sidebar-container {
+    display: none;
+  }
+}

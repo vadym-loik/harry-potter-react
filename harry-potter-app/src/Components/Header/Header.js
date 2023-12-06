@@ -11,11 +11,13 @@ const Header = () => {
           <SideBar className="sidebar" />
         </div>
 
-        <img
-          src={logo}
-          className="header-logo"
-          alt="hogwarts logo"
-        ></img>
+        <div className="header-logo">
+          <img
+            src={logo}
+            className="header-logo__img"
+            alt="hogwarts logo"
+          ></img>
+        </div>
 
         <nav className="header-nav">
           <ul className="header-nav__list">
