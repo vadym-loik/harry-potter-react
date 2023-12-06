@@ -1,4 +1,4 @@
-import '../Gryffindor/gryffindor.scss';
+import '../index.scss';
 import { useEffect, useState } from 'react';
 import { v4 as uuidv4 } from 'uuid';
 import logo from '../../assets/slytherin.png';
@@ -29,17 +29,17 @@ const Slytherin = () => {
 
   return (
     <div
-      className="gryffindor-wrap"
+      className="page-wrap"
       style={{ backgroundColor: 'green' }}
     >
       <img
         src={logo}
-        className="gryffindor-logo"
-        alt="gryffindor logo"
+        className="page-logo"
+        alt="slytherin logo"
       ></img>
 
-      <div className="gryffindor">
-        <div className="gryffindor-list">{renderListOfCards()}</div>
+      <div className="page">
+        <div className="page-list">{renderListOfCards()}</div>
       </div>
     </div>
   );
